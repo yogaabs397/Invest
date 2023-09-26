@@ -15,4 +15,11 @@ extension Color {
     static func appColor() -> Color {
         return Color("Appcolor")
     }
+    static func shadowColor() -> Color {
+        return Color("shadowcolor")
+    }
+    static func backgroundColor() -> Color {
+        return Color("background")
+    }
+    
 }

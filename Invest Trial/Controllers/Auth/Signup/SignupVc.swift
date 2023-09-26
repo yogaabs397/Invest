@@ -18,7 +18,7 @@ struct SignupVc: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack {
                     VStack {
@@ -73,11 +73,11 @@ struct SignupVc: View {
                     }.contentShape(Rectangle())
                         .frame(maxWidth: .infinity)
                         .frame(height: 60)
-                        .background(Color.green)
+                        .background(Color.appColor())
                         .cornerRadius(15)
                         .shadow(radius: 4, y: 4)
                         .padding([.horizontal, .vertical], 25)
-                    Text(Constant.alreadylogin).foregroundColor(.green).fontWeight(.semibold)
+                    Text(Constant.alreadylogin).foregroundColor(Color.appColor()).fontWeight(.semibold)
                     NavigationLink(destination: HomeVc().navigationBarBackButtonHidden(true), isActive: $isHome) {
                         EmptyView().background(.gray)
                     }

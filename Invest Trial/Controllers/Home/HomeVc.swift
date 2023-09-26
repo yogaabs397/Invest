@@ -36,6 +36,7 @@ struct HomeVc: View {
                 }
             
         } .accentColor(.appColor())
+        
     }
 }
 

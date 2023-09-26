@@ -21,4 +21,10 @@ struct Constant {
     static var passwordplaceHolder = "Password"
     static var alreadylogin  = "Already have an account?"
     static var profile  = "Profile"
+    static var profilecontact  = "Contact Info"
+    static var profilefund  = "Source of Funding Info"
+    static var profilebank  = "Bank Account Info"
+    static var profiledocument  = "Document Info"
+    static var profilesettings  = "Settings"
+    
 }

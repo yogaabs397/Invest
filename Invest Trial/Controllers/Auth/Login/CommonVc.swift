@@ -9,10 +9,12 @@ import SwiftUI
 
 struct CommonVc: View {
     
+    //MARK: PROPERTIES :
+    
     @State var ispresent = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack {
                     Image("Splash").resizable()
@@ -43,11 +45,11 @@ struct CommonVc: View {
                     }.contentShape(Rectangle())
                         .frame(maxWidth: .infinity)
                         .frame(height: 60)
-                        .background(Color.green)
+                        .background(Color.appColor())
                         .cornerRadius(15)
                         .shadow(radius: 4, y: 4)
                         .padding()
-                    Text(Constant.login).foregroundColor(.green).fontWeight(.semibold)
+                    Text(Constant.login).foregroundColor(Color.appColor()).fontWeight(.semibold)
                     
                     NavigationLink(destination: SignupVc().navigationBarBackButtonHidden(true), isActive: $ispresent) {
                         EmptyView().background(.gray)
