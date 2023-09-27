@@ -21,5 +21,8 @@ extension Color {
     static func backgroundColor() -> Color {
         return Color("background")
     }
+    static func subtitleColor() -> Color {
+        return Color("SubtitleColor")
+    }
     
 }

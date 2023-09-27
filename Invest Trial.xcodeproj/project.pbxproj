@@ -18,19 +18,26 @@
 		90260BB72AC17127001269D9 /* Invest_TrialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90260BB62AC17127001269D9 /* Invest_TrialTests.swift */; };
 		90260BC12AC17127001269D9 /* Invest_TrialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90260BC02AC17127001269D9 /* Invest_TrialUITests.swift */; };
 		90260BC32AC17127001269D9 /* Invest_TrialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90260BC22AC17127001269D9 /* Invest_TrialUITestsLaunchTests.swift */; };
-		90260BD42AC171E2001269D9 /* CommonVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90260BD32AC171E2001269D9 /* CommonVc.swift */; };
 		90260BD92AC176D2001269D9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90260BD82AC176D2001269D9 /* Constant.swift */; };
 		90260BDB2AC17ACA001269D9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90260BDA2AC17ACA001269D9 /* Colors.xcassets */; };
 		90260BDE2AC17B35001269D9 /* ColorsEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90260BDD2AC17B35001269D9 /* ColorsEx.swift */; };
-		90260BE02AC18AB9001269D9 /* SignupVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90260BDF2AC18AB9001269D9 /* SignupVc.swift */; };
 		90260BE22AC1938B001269D9 /* NavigationTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90260BE12AC1938B001269D9 /* NavigationTopView.swift */; };
 		90260BE42AC19482001269D9 /* ImageEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90260BE32AC19482001269D9 /* ImageEx.swift */; };
-		90260BE92AC19F8C001269D9 /* HomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90260BE82AC19F8C001269D9 /* HomeVc.swift */; };
-		90260BEC2AC1A26C001269D9 /* ProfileVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90260BEB2AC1A26C001269D9 /* ProfileVc.swift */; };
-		90C9066F2AC2A08E0031C1B0 /* ProfileSubVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C9066E2AC2A08E0031C1B0 /* ProfileSubVc.swift */; };
+		902657D72AC40D7100A98C97 /* BestPlansCvw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902657D62AC40D7100A98C97 /* BestPlansCvw.swift */; };
+		902657D92AC41BF700A98C97 /* InvestGuideCvw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902657D82AC41BF700A98C97 /* InvestGuideCvw.swift */; };
+		905CE5F22AC44142004C04B5 /* HomeDetailVw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE5E62AC44142004C04B5 /* HomeDetailVw.swift */; };
+		905CE5F32AC44142004C04B5 /* ProfileVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE5E82AC44142004C04B5 /* ProfileVc.swift */; };
+		905CE5F42AC44142004C04B5 /* BankVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE5E92AC44142004C04B5 /* BankVc.swift */; };
+		905CE5F52AC44142004C04B5 /* EditInfoVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE5EA2AC44142004C04B5 /* EditInfoVc.swift */; };
+		905CE5F62AC44142004C04B5 /* ProfileSubVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE5EB2AC44142004C04B5 /* ProfileSubVc.swift */; };
+		905CE5F72AC44142004C04B5 /* HomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE5EC2AC44142004C04B5 /* HomeVc.swift */; };
+		905CE5F82AC44142004C04B5 /* SignupVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE5EF2AC44142004C04B5 /* SignupVc.swift */; };
+		905CE5F92AC44142004C04B5 /* CommonVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE5F12AC44142004C04B5 /* CommonVc.swift */; };
+		905CE5FB2AC44408004C04B5 /* NotificationVw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE5FA2AC44408004C04B5 /* NotificationVw.swift */; };
+		905CE6002AC444AF004C04B5 /* NotificationTvw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE5FF2AC444AF004C04B5 /* NotificationTvw.swift */; };
+		905CE6022AC45855004C04B5 /* BankListVw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE6012AC45855004C04B5 /* BankListVw.swift */; };
+		905CE6042AC459DA004C04B5 /* BankListTvw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE6032AC459DA004C04B5 /* BankListTvw.swift */; };
 		90C906722AC2A0C50031C1B0 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C906712AC2A0C40031C1B0 /* ProfileModel.swift */; };
-		90C906742AC2C00A0031C1B0 /* EditInfoVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C906732AC2C00A0031C1B0 /* EditInfoVc.swift */; };
-		90C906782AC2E8530031C1B0 /* BankVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C906772AC2E8530031C1B0 /* BankVc.swift */; };
 		90E285502AC308900026C1CA /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90E285492AC308900026C1CA /* DMSans-Regular.ttf */; };
 		90E285512AC308900026C1CA /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90E2854A2AC308900026C1CA /* DMSans-Medium.ttf */; };
 		90E285522AC308900026C1CA /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90E2854B2AC308900026C1CA /* DMSans-Bold.ttf */; };
@@ -75,19 +82,26 @@
 		90260BBC2AC17127001269D9 /* Invest TrialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Invest TrialUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90260BC02AC17127001269D9 /* Invest_TrialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invest_TrialUITests.swift; sourceTree = "<group>"; };
 		90260BC22AC17127001269D9 /* Invest_TrialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invest_TrialUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		90260BD32AC171E2001269D9 /* CommonVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonVc.swift; sourceTree = "<group>"; };
 		90260BD82AC176D2001269D9 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		90260BDA2AC17ACA001269D9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		90260BDD2AC17B35001269D9 /* ColorsEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsEx.swift; sourceTree = "<group>"; };
-		90260BDF2AC18AB9001269D9 /* SignupVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVc.swift; sourceTree = "<group>"; };
 		90260BE12AC1938B001269D9 /* NavigationTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTopView.swift; sourceTree = "<group>"; };
 		90260BE32AC19482001269D9 /* ImageEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEx.swift; sourceTree = "<group>"; };
-		90260BE82AC19F8C001269D9 /* HomeVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVc.swift; sourceTree = "<group>"; };
-		90260BEB2AC1A26C001269D9 /* ProfileVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVc.swift; sourceTree = "<group>"; };
-		90C9066E2AC2A08E0031C1B0 /* ProfileSubVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSubVc.swift; sourceTree = "<group>"; };
+		902657D62AC40D7100A98C97 /* BestPlansCvw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestPlansCvw.swift; sourceTree = "<group>"; };
+		902657D82AC41BF700A98C97 /* InvestGuideCvw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestGuideCvw.swift; sourceTree = "<group>"; };
+		905CE5E62AC44142004C04B5 /* HomeDetailVw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDetailVw.swift; sourceTree = "<group>"; };
+		905CE5E82AC44142004C04B5 /* ProfileVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVc.swift; sourceTree = "<group>"; };
+		905CE5E92AC44142004C04B5 /* BankVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankVc.swift; sourceTree = "<group>"; };
+		905CE5EA2AC44142004C04B5 /* EditInfoVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditInfoVc.swift; sourceTree = "<group>"; };
+		905CE5EB2AC44142004C04B5 /* ProfileSubVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSubVc.swift; sourceTree = "<group>"; };
+		905CE5EC2AC44142004C04B5 /* HomeVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVc.swift; sourceTree = "<group>"; };
+		905CE5EF2AC44142004C04B5 /* SignupVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVc.swift; sourceTree = "<group>"; };
+		905CE5F12AC44142004C04B5 /* CommonVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonVc.swift; sourceTree = "<group>"; };
+		905CE5FA2AC44408004C04B5 /* NotificationVw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVw.swift; sourceTree = "<group>"; };
+		905CE5FF2AC444AF004C04B5 /* NotificationTvw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTvw.swift; sourceTree = "<group>"; };
+		905CE6012AC45855004C04B5 /* BankListVw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankListVw.swift; sourceTree = "<group>"; };
+		905CE6032AC459DA004C04B5 /* BankListTvw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankListTvw.swift; sourceTree = "<group>"; };
 		90C906712AC2A0C40031C1B0 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
-		90C906732AC2C00A0031C1B0 /* EditInfoVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoVc.swift; sourceTree = "<group>"; };
-		90C906772AC2E8530031C1B0 /* BankVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankVc.swift; sourceTree = "<group>"; };
 		90E285492AC308900026C1CA /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 		90E2854A2AC308900026C1CA /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
 		90E2854B2AC308900026C1CA /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -155,11 +169,12 @@
 		90260B9F2AC17124001269D9 /* Invest Trial */ = {
 			isa = PBXGroup;
 			children = (
+				902657D42AC40B1900A98C97 /* Cell Vws */,
 				90C906792AC3022E0031C1B0 /* Fonts */,
 				90C906702AC2A0AF0031C1B0 /* Models */,
 				90260BDC2AC17B20001269D9 /* Extension */,
 				90260BD52AC17499001269D9 /* Helper */,
-				90260BCF2AC1714F001269D9 /* Controllers */,
+				905CE5E42AC44141004C04B5 /* Views */,
 				90260BA02AC17124001269D9 /* Invest_TrialApp.swift */,
 				90260BA22AC17124001269D9 /* ContentView.swift */,
 				90260BDA2AC17ACA001269D9 /* Colors.xcassets */,
@@ -196,40 +211,6 @@
 			path = "Invest TrialUITests";
 			sourceTree = "<group>";
 		};
-		90260BCF2AC1714F001269D9 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				90260BE52AC19F41001269D9 /* Home */,
-				90260BD02AC17184001269D9 /* Auth */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		90260BD02AC17184001269D9 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				90260BD22AC171AA001269D9 /* Signup */,
-				90260BD12AC17190001269D9 /* Login */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		90260BD12AC17190001269D9 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				90260BD32AC171E2001269D9 /* CommonVc.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		90260BD22AC171AA001269D9 /* Signup */ = {
-			isa = PBXGroup;
-			children = (
-				90260BDF2AC18AB9001269D9 /* SignupVc.swift */,
-			);
-			path = Signup;
-			sourceTree = "<group>";
-		};
 		90260BD52AC17499001269D9 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,24 +229,89 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		90260BE52AC19F41001269D9 /* Home */ = {
+		902657D42AC40B1900A98C97 /* Cell Vws */ = {
 			isa = PBXGroup;
 			children = (
-				90260BEA2AC1A257001269D9 /* Profile */,
-				90260BE82AC19F8C001269D9 /* HomeVc.swift */,
+				905CE5FC2AC4447D004C04B5 /* TableView */,
+				902657D52AC40CF800A98C97 /* CollectionView */,
+			);
+			name = "Cell Vws";
+			sourceTree = "<group>";
+		};
+		902657D52AC40CF800A98C97 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				902657D62AC40D7100A98C97 /* BestPlansCvw.swift */,
+				902657D82AC41BF700A98C97 /* InvestGuideCvw.swift */,
+			);
+			name = CollectionView;
+			sourceTree = "<group>";
+		};
+		905CE5E42AC44141004C04B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				905CE5E52AC44142004C04B5 /* Home */,
+				905CE5ED2AC44142004C04B5 /* Auth */,
+			);
+			name = Views;
+			path = "Invest Trial/Views";
+			sourceTree = SOURCE_ROOT;
+		};
+		905CE5E52AC44142004C04B5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				905CE5E62AC44142004C04B5 /* HomeDetailVw.swift */,
+				905CE5E72AC44142004C04B5 /* Profile */,
+				905CE5EC2AC44142004C04B5 /* HomeVc.swift */,
+				905CE5FA2AC44408004C04B5 /* NotificationVw.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		90260BEA2AC1A257001269D9 /* Profile */ = {
+		905CE5E72AC44142004C04B5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				90260BEB2AC1A26C001269D9 /* ProfileVc.swift */,
-				90C9066E2AC2A08E0031C1B0 /* ProfileSubVc.swift */,
-				90C906732AC2C00A0031C1B0 /* EditInfoVc.swift */,
-				90C906772AC2E8530031C1B0 /* BankVc.swift */,
+				905CE5E82AC44142004C04B5 /* ProfileVc.swift */,
+				905CE5E92AC44142004C04B5 /* BankVc.swift */,
+				905CE5EA2AC44142004C04B5 /* EditInfoVc.swift */,
+				905CE5EB2AC44142004C04B5 /* ProfileSubVc.swift */,
+				905CE6012AC45855004C04B5 /* BankListVw.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		905CE5ED2AC44142004C04B5 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				905CE5EE2AC44142004C04B5 /* Signup */,
+				905CE5F02AC44142004C04B5 /* Login */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		905CE5EE2AC44142004C04B5 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				905CE5EF2AC44142004C04B5 /* SignupVc.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		905CE5F02AC44142004C04B5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				905CE5F12AC44142004C04B5 /* CommonVc.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		905CE5FC2AC4447D004C04B5 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				905CE5FF2AC444AF004C04B5 /* NotificationTvw.swift */,
+				905CE6032AC459DA004C04B5 /* BankListTvw.swift */,
+			);
+			name = TableView;
 			sourceTree = "<group>";
 		};
 		90C906702AC2A0AF0031C1B0 /* Models */ = {
@@ -568,21 +614,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				90260BE22AC1938B001269D9 /* NavigationTopView.swift in Sources */,
+				905CE5F72AC44142004C04B5 /* HomeVc.swift in Sources */,
+				905CE5F62AC44142004C04B5 /* ProfileSubVc.swift in Sources */,
+				905CE5FB2AC44408004C04B5 /* NotificationVw.swift in Sources */,
+				905CE6002AC444AF004C04B5 /* NotificationTvw.swift in Sources */,
+				902657D92AC41BF700A98C97 /* InvestGuideCvw.swift in Sources */,
+				905CE5F22AC44142004C04B5 /* HomeDetailVw.swift in Sources */,
 				90C906722AC2A0C50031C1B0 /* ProfileModel.swift in Sources */,
-				90C9066F2AC2A08E0031C1B0 /* ProfileSubVc.swift in Sources */,
-				90260BE92AC19F8C001269D9 /* HomeVc.swift in Sources */,
-				90260BE02AC18AB9001269D9 /* SignupVc.swift in Sources */,
-				90260BD42AC171E2001269D9 /* CommonVc.swift in Sources */,
 				90260BAA2AC17127001269D9 /* Persistence.swift in Sources */,
 				90260BAD2AC17127001269D9 /* Invest_Trial.xcdatamodeld in Sources */,
+				905CE5F52AC44142004C04B5 /* EditInfoVc.swift in Sources */,
 				90260BA32AC17124001269D9 /* ContentView.swift in Sources */,
 				90260BE42AC19482001269D9 /* ImageEx.swift in Sources */,
-				90C906742AC2C00A0031C1B0 /* EditInfoVc.swift in Sources */,
-				90260BEC2AC1A26C001269D9 /* ProfileVc.swift in Sources */,
-				90C906782AC2E8530031C1B0 /* BankVc.swift in Sources */,
+				902657D72AC40D7100A98C97 /* BestPlansCvw.swift in Sources */,
+				905CE6022AC45855004C04B5 /* BankListVw.swift in Sources */,
+				905CE5F92AC44142004C04B5 /* CommonVc.swift in Sources */,
 				90260BA12AC17124001269D9 /* Invest_TrialApp.swift in Sources */,
+				905CE5F42AC44142004C04B5 /* BankVc.swift in Sources */,
 				90260BD92AC176D2001269D9 /* Constant.swift in Sources */,
 				90260BDE2AC17B35001269D9 /* ColorsEx.swift in Sources */,
+				905CE6042AC459DA004C04B5 /* BankListTvw.swift in Sources */,
+				905CE5F82AC44142004C04B5 /* SignupVc.swift in Sources */,
+				905CE5F32AC44142004C04B5 /* ProfileVc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

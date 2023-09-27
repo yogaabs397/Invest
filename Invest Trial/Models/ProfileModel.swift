@@ -12,4 +12,5 @@ struct ProfileModel {
     var subName : String = String()
     var subImg  : String = String()
     var isSelected : Bool = Bool()
+    
 }

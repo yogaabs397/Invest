@@ -26,7 +26,7 @@ struct ProfileVc: View {
                 VStack {
                     VStack {
                     }.frame(height: 35).frame(height: 35)
-                    NavigationTopView(Btnname: "")
+                    NavigationTopView(Btnname: "", isNotification: false, ismenu: false)
                         .onTapGesture {
                             presentationMode.wrappedValue.dismiss()
                         }

@@ -25,7 +25,7 @@ struct EditInfoVc: View {
                 VStack {
                     VStack {
                     }.frame(height: 35)
-                    NavigationTopView(Btnname: Constant.profilecontact)
+                    NavigationTopView(Btnname: Constant.profilecontact, isNotification: false, ismenu: false)
                         .onTapGesture {
                             presentationMode.wrappedValue.dismiss()
                         }

@@ -26,5 +26,8 @@ struct Constant {
     static var profilebank  = "Bank Account Info"
     static var profiledocument  = "Document Info"
     static var profilesettings  = "Settings"
-    
+    static var welcomeContent = "Welcome, Jessie."
+    static var homeContent = "Your total asset portfolio"
+    static var notification = "Notification"
+    static var banktitle = "Bank of account info"
 }
