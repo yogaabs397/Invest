@@ -25,6 +25,17 @@
 		90260BE42AC19482001269D9 /* ImageEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90260BE32AC19482001269D9 /* ImageEx.swift */; };
 		902657D72AC40D7100A98C97 /* BestPlansCvw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902657D62AC40D7100A98C97 /* BestPlansCvw.swift */; };
 		902657D92AC41BF700A98C97 /* InvestGuideCvw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902657D82AC41BF700A98C97 /* InvestGuideCvw.swift */; };
+		903D472B2AC5503000A69262 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D472A2AC5503000A69262 /* ApiClient.swift */; };
+		903D472E2AC5509D00A69262 /* HttpNetworkRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D472D2AC5509D00A69262 /* HttpNetworkRoute.swift */; };
+		903D47302AC551E900A69262 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D472F2AC551E900A69262 /* Resource.swift */; };
+		903D47322AC554C300A69262 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D47312AC554C300A69262 /* BaseModel.swift */; };
+		903D47342AC5558500A69262 /* UserDefaultsEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D47332AC5558500A69262 /* UserDefaultsEx.swift */; };
+		903D47362AC555E200A69262 /* LoginVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D47352AC555E200A69262 /* LoginVm.swift */; };
+		903D47382AC5564600A69262 /* RegisterVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D47372AC5564600A69262 /* RegisterVm.swift */; };
+		903D473A2AC558FB00A69262 /* RegisterMapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D47392AC558FB00A69262 /* RegisterMapModel.swift */; };
+		903D473E2AC55C1D00A69262 /* LoginVw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D473D2AC55C1D00A69262 /* LoginVw.swift */; };
+		903D47422AC5774500A69262 /* InvestVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D47412AC5774500A69262 /* InvestVm.swift */; };
+		903D47442AC5825E00A69262 /* InvestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D47432AC5825E00A69262 /* InvestModel.swift */; };
 		905CE5F22AC44142004C04B5 /* HomeDetailVw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE5E62AC44142004C04B5 /* HomeDetailVw.swift */; };
 		905CE5F32AC44142004C04B5 /* ProfileVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE5E82AC44142004C04B5 /* ProfileVc.swift */; };
 		905CE5F42AC44142004C04B5 /* BankVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE5E92AC44142004C04B5 /* BankVc.swift */; };
@@ -37,6 +48,7 @@
 		905CE6002AC444AF004C04B5 /* NotificationTvw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE5FF2AC444AF004C04B5 /* NotificationTvw.swift */; };
 		905CE6022AC45855004C04B5 /* BankListVw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE6012AC45855004C04B5 /* BankListVw.swift */; };
 		905CE6042AC459DA004C04B5 /* BankListTvw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE6032AC459DA004C04B5 /* BankListTvw.swift */; };
+		905F83152AC5AC1E002BA6F8 /* ShowAlertVws.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905F83142AC5AC1E002BA6F8 /* ShowAlertVws.swift */; };
 		90C906722AC2A0C50031C1B0 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C906712AC2A0C40031C1B0 /* ProfileModel.swift */; };
 		90E285502AC308900026C1CA /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90E285492AC308900026C1CA /* DMSans-Regular.ttf */; };
 		90E285512AC308900026C1CA /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90E2854A2AC308900026C1CA /* DMSans-Medium.ttf */; };
@@ -89,6 +101,17 @@
 		90260BE32AC19482001269D9 /* ImageEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEx.swift; sourceTree = "<group>"; };
 		902657D62AC40D7100A98C97 /* BestPlansCvw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestPlansCvw.swift; sourceTree = "<group>"; };
 		902657D82AC41BF700A98C97 /* InvestGuideCvw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestGuideCvw.swift; sourceTree = "<group>"; };
+		903D472A2AC5503000A69262 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		903D472D2AC5509D00A69262 /* HttpNetworkRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpNetworkRoute.swift; sourceTree = "<group>"; };
+		903D472F2AC551E900A69262 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		903D47312AC554C300A69262 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		903D47332AC5558500A69262 /* UserDefaultsEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsEx.swift; sourceTree = "<group>"; };
+		903D47352AC555E200A69262 /* LoginVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVm.swift; sourceTree = "<group>"; };
+		903D47372AC5564600A69262 /* RegisterVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVm.swift; sourceTree = "<group>"; };
+		903D47392AC558FB00A69262 /* RegisterMapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMapModel.swift; sourceTree = "<group>"; };
+		903D473D2AC55C1D00A69262 /* LoginVw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVw.swift; sourceTree = "<group>"; };
+		903D47412AC5774500A69262 /* InvestVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestVm.swift; sourceTree = "<group>"; };
+		903D47432AC5825E00A69262 /* InvestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestModel.swift; sourceTree = "<group>"; };
 		905CE5E62AC44142004C04B5 /* HomeDetailVw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDetailVw.swift; sourceTree = "<group>"; };
 		905CE5E82AC44142004C04B5 /* ProfileVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVc.swift; sourceTree = "<group>"; };
 		905CE5E92AC44142004C04B5 /* BankVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankVc.swift; sourceTree = "<group>"; };
@@ -101,6 +124,7 @@
 		905CE5FF2AC444AF004C04B5 /* NotificationTvw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTvw.swift; sourceTree = "<group>"; };
 		905CE6012AC45855004C04B5 /* BankListVw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankListVw.swift; sourceTree = "<group>"; };
 		905CE6032AC459DA004C04B5 /* BankListTvw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankListTvw.swift; sourceTree = "<group>"; };
+		905F83142AC5AC1E002BA6F8 /* ShowAlertVws.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertVws.swift; sourceTree = "<group>"; };
 		90C906712AC2A0C40031C1B0 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		90E285492AC308900026C1CA /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 		90E2854A2AC308900026C1CA /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
@@ -169,6 +193,8 @@
 		90260B9F2AC17124001269D9 /* Invest Trial */ = {
 			isa = PBXGroup;
 			children = (
+				903D47282AC5500F00A69262 /* Networking */,
+				903D47262AC54F5700A69262 /* ViewModels */,
 				902657D42AC40B1900A98C97 /* Cell Vws */,
 				90C906792AC3022E0031C1B0 /* Fonts */,
 				90C906702AC2A0AF0031C1B0 /* Models */,
@@ -225,6 +251,8 @@
 				90260BDD2AC17B35001269D9 /* ColorsEx.swift */,
 				90260BE12AC1938B001269D9 /* NavigationTopView.swift */,
 				90260BE32AC19482001269D9 /* ImageEx.swift */,
+				903D47332AC5558500A69262 /* UserDefaultsEx.swift */,
+				905F83142AC5AC1E002BA6F8 /* ShowAlertVws.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -245,6 +273,49 @@
 				902657D82AC41BF700A98C97 /* InvestGuideCvw.swift */,
 			);
 			name = CollectionView;
+			sourceTree = "<group>";
+		};
+		903D47262AC54F5700A69262 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				903D47272AC54F6600A69262 /* Auth */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		903D47272AC54F6600A69262 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				903D47352AC555E200A69262 /* LoginVm.swift */,
+				903D47372AC5564600A69262 /* RegisterVm.swift */,
+				903D47412AC5774500A69262 /* InvestVm.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		903D47282AC5500F00A69262 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				903D472C2AC5508A00A69262 /* HTTP */,
+				903D47292AC5501D00A69262 /* Service */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		903D47292AC5501D00A69262 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				903D472A2AC5503000A69262 /* ApiClient.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		903D472C2AC5508A00A69262 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				903D472D2AC5509D00A69262 /* HttpNetworkRoute.swift */,
+			);
+			path = HTTP;
 			sourceTree = "<group>";
 		};
 		905CE5E42AC44141004C04B5 /* Views */ = {
@@ -301,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				905CE5F12AC44142004C04B5 /* CommonVc.swift */,
+				903D473D2AC55C1D00A69262 /* LoginVw.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -318,6 +390,10 @@
 			isa = PBXGroup;
 			children = (
 				90C906712AC2A0C40031C1B0 /* ProfileModel.swift */,
+				903D472F2AC551E900A69262 /* Resource.swift */,
+				903D47312AC554C300A69262 /* BaseModel.swift */,
+				903D47392AC558FB00A69262 /* RegisterMapModel.swift */,
+				903D47432AC5825E00A69262 /* InvestModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -620,22 +696,34 @@
 				905CE6002AC444AF004C04B5 /* NotificationTvw.swift in Sources */,
 				902657D92AC41BF700A98C97 /* InvestGuideCvw.swift in Sources */,
 				905CE5F22AC44142004C04B5 /* HomeDetailVw.swift in Sources */,
+				903D47362AC555E200A69262 /* LoginVm.swift in Sources */,
 				90C906722AC2A0C50031C1B0 /* ProfileModel.swift in Sources */,
 				90260BAA2AC17127001269D9 /* Persistence.swift in Sources */,
 				90260BAD2AC17127001269D9 /* Invest_Trial.xcdatamodeld in Sources */,
 				905CE5F52AC44142004C04B5 /* EditInfoVc.swift in Sources */,
+				903D472B2AC5503000A69262 /* ApiClient.swift in Sources */,
 				90260BA32AC17124001269D9 /* ContentView.swift in Sources */,
+				903D473E2AC55C1D00A69262 /* LoginVw.swift in Sources */,
+				903D473A2AC558FB00A69262 /* RegisterMapModel.swift in Sources */,
+				903D47302AC551E900A69262 /* Resource.swift in Sources */,
 				90260BE42AC19482001269D9 /* ImageEx.swift in Sources */,
 				902657D72AC40D7100A98C97 /* BestPlansCvw.swift in Sources */,
 				905CE6022AC45855004C04B5 /* BankListVw.swift in Sources */,
+				903D47422AC5774500A69262 /* InvestVm.swift in Sources */,
 				905CE5F92AC44142004C04B5 /* CommonVc.swift in Sources */,
+				903D47442AC5825E00A69262 /* InvestModel.swift in Sources */,
+				903D47322AC554C300A69262 /* BaseModel.swift in Sources */,
 				90260BA12AC17124001269D9 /* Invest_TrialApp.swift in Sources */,
 				905CE5F42AC44142004C04B5 /* BankVc.swift in Sources */,
+				903D472E2AC5509D00A69262 /* HttpNetworkRoute.swift in Sources */,
+				903D47382AC5564600A69262 /* RegisterVm.swift in Sources */,
 				90260BD92AC176D2001269D9 /* Constant.swift in Sources */,
 				90260BDE2AC17B35001269D9 /* ColorsEx.swift in Sources */,
 				905CE6042AC459DA004C04B5 /* BankListTvw.swift in Sources */,
+				905F83152AC5AC1E002BA6F8 /* ShowAlertVws.swift in Sources */,
 				905CE5F82AC44142004C04B5 /* SignupVc.swift in Sources */,
 				905CE5F32AC44142004C04B5 /* ProfileVc.swift in Sources */,
+				903D47342AC5558500A69262 /* UserDefaultsEx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

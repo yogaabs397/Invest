@@ -6,15 +6,20 @@
 //
 
 import SwiftUI
+import AlertToast
 
 struct SignupVc: View {
     
     //MARK: PROPERTIES :
     
-    @State private var fullname = String()
-    @State private var email = String()
-    @State private var password = String()
+    @State private var fullname = "yoga"
+    @State private var email = "eve.holt@reqres.in"
+    @State private var password = "1234567"
     @State var isHome = false
+    @State var signupVm = RegisterVm()
+    @State var loginScreen = Bool()
+    @State private var showToast = false
+    @State var message = String()
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -62,7 +67,7 @@ struct SignupVc: View {
                         
                     }
                     Button(action: {
-                        isHome = true
+                      //  isHome = true
                     }) {
                         Text(Constant.createAccount)
                             .padding(.horizontal)
@@ -76,11 +81,34 @@ struct SignupVc: View {
                         .background(Color.appColor())
                         .cornerRadius(15)
                         .shadow(radius: 4, y: 4)
-                        .padding([.horizontal, .vertical], 25)
-                    Text(Constant.alreadylogin).foregroundColor(Color.appColor()).fontWeight(.semibold)
+                        .padding([.horizontal, .vertical], 25).onTapGesture {
+                            if fullname.isEmpty {
+                                message = "Please Enter Full name"
+                                showToast.toggle()
+                            }  else if email.isEmpty {
+                                message = "Please Enter Email Id"
+                                showToast.toggle()
+                            } else if password.isEmpty {
+                                message = "Please Enter Password"
+                                showToast.toggle()
+                            }else {
+                                var reqModel = RegisterMapModel()
+                                reqModel.email = email
+                                reqModel.password = password
+                                signupApi(with: reqModel)
+                            }
+                        }
+                    Text(Constant.alreadylogin).foregroundColor(Color.appColor()).fontWeight(.semibold).onTapGesture {
+                        loginScreen = true
+                    }
                     NavigationLink(destination: HomeVc().navigationBarBackButtonHidden(true), isActive: $isHome) {
                         EmptyView().background(.gray)
                     }
+                    NavigationLink(destination: LoginVw().navigationBarBackButtonHidden(true), isActive: $loginScreen) {
+                        EmptyView().background(.gray)
+                    }
+                }.toast(isPresenting: $showToast){
+                    AlertToast(displayMode: .hud, type: .regular, title: message)
                 }
             }
         }
@@ -90,5 +118,16 @@ struct SignupVc: View {
 struct SignupVc_Previews: PreviewProvider {
     static var previews: some View {
         SignupVc()
+    }
+}
+extension SignupVc {
+    func signupApi(with regreq: RegisterMapModel) {
+        signupVm.loginApi(with: regreq)
+        signupVm.successHandler = { (resData) in
+            isHome = true
+        }
+        signupVm.errorHandler = { (errData) in
+            print("Error Response :: \(errData)")
+        }
     }
 }

@@ -10,15 +10,15 @@ import SwiftUI
 struct BestPlansCvw: View {
     
     //MARK: - PROPERTIES :
-    var subcatName = String()
+    var bestPlans = InvestModel()
     var body: some View {
         HStack {
             VStack(spacing: 2) {
-                Text("Gold")   .foregroundColor(.white)
-                    .font(.system(size: 27))
+                Text(bestPlans.name)   .foregroundColor(.white)
+                    .font(.system(size: 25))
                     .fontWeight(.bold)
                     .padding(.horizontal, 20) .frame(maxWidth: .infinity, alignment: .leading).padding(.top, 15)
-                Text("30% return")
+                Text(bestPlans.year.description)
                     .foregroundColor(Color.white)
                     .font(.system(size: 15))
                     .fontWeight(.medium)

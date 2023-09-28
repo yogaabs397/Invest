@@ -12,6 +12,7 @@ struct CommonVc: View {
     //MARK: PROPERTIES :
     
     @State var ispresent = false
+    @State var loginScreen = Bool()
     
     var body: some View {
         NavigationStack {
@@ -49,11 +50,17 @@ struct CommonVc: View {
                         .cornerRadius(15)
                         .shadow(radius: 4, y: 4)
                         .padding()
-                    Text(Constant.login).foregroundColor(Color.appColor()).fontWeight(.semibold)
+                    Text(Constant.login).foregroundColor(Color.appColor()).fontWeight(.semibold).onTapGesture {
+                        loginScreen = true
+                    }
                     
                     NavigationLink(destination: SignupVc().navigationBarBackButtonHidden(true), isActive: $ispresent) {
                         EmptyView().background(.gray)
                     }
+                    NavigationLink(destination: LoginVw().navigationBarBackButtonHidden(true), isActive: $loginScreen) {
+                        EmptyView().background(.gray)
+                    }
+                    
                 }
                 
             }

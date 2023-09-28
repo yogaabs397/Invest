@@ -13,7 +13,7 @@ struct Invest_TrialApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CommonVc()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

@@ -7,11 +7,19 @@
 
 import SwiftUI
 
+enum InvestSubtype {
+    case bestplan
+    case investmentGuide
+}
+
 struct HomeDetailVw: View {
     
     // MARK: - PROPERTIES :
     @Environment(\.presentationMode) var presentationMode
     @State var investNow = Bool()
+    @StateObject var investguide = observer(with: .investmentGuide)
+    @StateObject var bestPlan = observer(with: .bestplan)
+    var subtype: InvestSubtype = .bestplan
    
     var body: some View {
         NavigationStack {
@@ -44,7 +52,7 @@ struct HomeDetailVw: View {
                             Button(action: {
                                 investNow = true
                             }) {
-                                Text("Invest now")
+                                Text(Constant.investNow)
                                     .fontWeight(.medium)
                                     .font(.headline)
                                     .font(.system(size: 14))
@@ -65,13 +73,13 @@ struct HomeDetailVw: View {
                         .cornerRadius(20)
                         .padding(.horizontal, 25)
                     HStack {
-                        Text("Best Plans")   .foregroundColor(.black)
+                        Text(Constant.bestPlan)   .foregroundColor(.black)
                             .font(.system(size: 25))
                             .fontWeight(.bold)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .multilineTextAlignment(.leading).padding([.leading, .top], 30)
                         Spacer()
-                        Text("See All ->")
+                        Text(Constant.seeAll)
                             .foregroundColor(Color.red)
                             .font(.system(size: 18))
                             .fontWeight(.medium)
@@ -80,14 +88,14 @@ struct HomeDetailVw: View {
                     
                     ScrollView(.horizontal) {
                         LazyHStack(spacing: 15) {
-                            ForEach (0..<5, id: \.self) { i in
-                                BestPlansCvw(subcatName: "")
+                            ForEach (0..<bestPlan.investData.count, id: \.self) { i in
+                                BestPlansCvw(bestPlans: bestPlan.investData[i])
                             }
                         }
                     }.padding().scrollIndicators(.hidden)
                     
                     VStack(spacing: 1) {
-                        Text("Investment Guide")   .foregroundColor(.black)
+                        Text(Constant.investGuide)   .foregroundColor(.black)
                             .font(.system(size: 25))
                             .fontWeight(.bold)
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -95,8 +103,8 @@ struct HomeDetailVw: View {
                         
                         ScrollView(.vertical) {
                             VStack(spacing: 10) {
-                                ForEach (0..<5, id: \.self) { i in
-                                    InvestGuideCvw(titleVal: "", subtitleVal: "")
+                                ForEach (0..<investguide.investData.count, id: \.self) { i in
+                                    InvestGuideCvw(investData: investguide.investData[i])
                                     Divider().background(.secondary)
                                 }
                               
@@ -115,5 +123,20 @@ struct HomeDetailVw: View {
 struct HomeDetailVw_Previews: PreviewProvider {
     static var previews: some View {
         HomeDetailVw()
+    }
+}
+class observer: ObservableObject {
+    
+    var investVm = InvestVm()
+    @Published  var investData = [InvestModel]()
+    
+    init(with type : InvestSubtype) {
+        investVm.investApi(with: type)
+        investVm.succesHandler = { (resData) in
+            self.investData = resData.investData
+        }
+        investVm.errorhandler = { (errData) in
+            print("Error Data : \(errData)")
+        }
     }
 }

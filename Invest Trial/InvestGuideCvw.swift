@@ -6,18 +6,21 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
+
 
 struct InvestGuideCvw: View {
 
     //MARK: - PROPERTIES :
     
-    var titleVal  = String()
-    var subtitleVal = String()
+//    var titleVal  = String()
+//    var subtitleVal = String()
+    var investData = InvestModel()
     
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text("Basic type of investments")
+                Text(investData.email)
                     .foregroundColor(Color.lightGray())
                     .font(.system(size: 22))
                     .fontWeight(.bold)
@@ -29,7 +32,11 @@ struct InvestGuideCvw: View {
                    .padding(.top, 2)
 
             }.padding()
-            Image("circle").resizable().frame(width: 80,height: 80).cornerRadius(40).padding(.trailing, 10)
+            
+            WebImage(url: URL(string: investData.avatar))
+            .onSuccess { image, data, cacheType in
+            }.resizable().frame(width: 80,height: 80).cornerRadius(40).padding(.trailing, 10)
+            
         }.contentShape(Rectangle())
             .frame(maxWidth: .infinity)
             .frame(height: 125).padding([.horizontal], 10)

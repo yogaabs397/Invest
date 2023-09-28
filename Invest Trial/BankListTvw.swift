@@ -27,11 +27,11 @@ struct BankListTvw: View {
                     Image("sidemenu").resizable().frame(width: 5, height: 20)
                     Spacer()
                 }.frame(width: 40)
-               
             }
-           
         }.contentShape(Rectangle())
-            .frame(height: 110)
+            .frame(height: 110).background(Color.white
+                .shadow(color: Color.white, radius: 10, x: 0, y: 0)
+              )
     }
 }
 

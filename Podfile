@@ -7,7 +7,12 @@ target 'Invest Trial' do
 
   # Pods for Invest Trial
 
-  pod 'FloatingLabelTextFieldSwiftUI'
+  pod 'Alamofire', '~> 4.0'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'ObjectMapper'
+  pod 'SDWebImageSwiftUI'
+  pod 'AlertToast'
+
 
 
   target 'Invest TrialTests' do
