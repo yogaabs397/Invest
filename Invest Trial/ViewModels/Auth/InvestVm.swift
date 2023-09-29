@@ -2,36 +2,45 @@
 //  InvestVm.swift
 //  Invest Trial
 //
-//  Created by Abservetech on 28/09/23.
+//  Created by  on 28/09/23.
 //
 
 import Foundation
 
 
-class InvestVm {
+class InvestVm: ObservableObject  {
     
-    var succesHandler: ((BaseModel) -> ())?
-    var errorhandler: ((String) -> ())?
+    @Published  var investData = [InvestModel]()
+    @Published  var investType : InvestSubtype = .bestplan
     
-}
-extension InvestVm  {
+    init(with type : InvestSubtype) {
+        investType = type
+        investApi(with: investType)
+    }
     func investApi(with investType: InvestSubtype) {
         var url = String()
-        switch investType {
-        case .investmentGuide:
-            url = HttpNetworkRoute.Auth.invest
-        case .bestplan:
-            url = HttpNetworkRoute.Auth.bestplan
+        investSubtypeData(investType: investType) { type in
+            url = type
         }
         var resource = Resource<BaseModel>(url: url)
         resource.httpMethod = .get
-        ApiClient.sharedInstance.sendRequest(withRes: resource) { result in
+        ApiClient.sharedInstance.sendRequest(withRes: resource) { [unowned self] result in
             switch result {
             case .success(let baseModel):
-                self.succesHandler?(baseModel)
-            case .failure(let error):
-                self.errorhandler?(error.messsage)
+                investData = baseModel.investData
+            case .failure(_):
+                break
             }
+        }
+    }
+}
+extension InvestVm {
+    func investSubtypeData(investType: InvestSubtype,investRes: @escaping((String) -> Void)) {
+        switch investType {
+        case .investmentGuide:
+             investRes(HttpNetworkRoute.Auth.invest)
+        case .bestplan:
+            investRes(HttpNetworkRoute.Auth.bestplan)
         }
     }
 }

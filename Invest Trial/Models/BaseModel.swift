@@ -2,7 +2,7 @@
 //  BaseModel.swift
 //  Invest Trial
 //
-//  Created by Abservetech on 28/09/23.
+//  Created by  on 28/09/23.
 //
 
 import Foundation
@@ -14,12 +14,13 @@ struct BaseModel: BaseSwiftyJSON {
     
     var message: String = String()
     var investData : [InvestModel] = [InvestModel]()
+    var error: String = String()
     
     init() { }
     
     init(json: JSON) {
+        self.error  = json["error"].string ?? String()
         self.message = json["message"].string ?? String()
-        
         let invest = json["data"].array
         let investArr = invest?.compactMap({ data -> InvestModel in
             return InvestModel(json: data)
@@ -35,6 +36,6 @@ struct Errormodel: Error {
     
     init() {}
     init(json: JSON) {
-        messsage = json["message"].string ?? String()
+        messsage = json["error"].string ?? String()
     }
 }

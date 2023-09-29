@@ -2,7 +2,7 @@
 //  InvestGuideCvw.swift
 //  Invest Trial
 //
-//  Created by Abservetech on 27/09/23.
+//  Created by  on 27/09/23.
 //
 
 import SwiftUI
@@ -12,9 +12,6 @@ import SDWebImageSwiftUI
 struct InvestGuideCvw: View {
 
     //MARK: - PROPERTIES :
-    
-//    var titleVal  = String()
-//    var subtitleVal = String()
     var investData = InvestModel()
     
     var body: some View {
@@ -22,24 +19,24 @@ struct InvestGuideCvw: View {
             VStack(alignment: .leading) {
                 Text(investData.email)
                     .foregroundColor(Color.lightGray())
-                    .font(.system(size: 22))
+                    .font(.system(size: Constant.Alignment.constraint_22))
                     .fontWeight(.bold)
-                   .padding(.top, 5)
-                Text("This is how you set your foot for 2020 Stock market recession. What’s next...")
+                   .padding(.top, Constant.Alignment.constraint_5)
+                Text(Constant.investGuidesubtitle)
                     .foregroundColor(Color.subtitleColor())
-                    .font(.system(size: 18))
+                    .font(.system(size: Constant.Alignment.constraint_18))
                     .fontWeight(.regular)
-                   .padding(.top, 2)
+                   .padding(.top, Constant.Alignment.constraint_2)
 
             }.padding()
             
             WebImage(url: URL(string: investData.avatar))
             .onSuccess { image, data, cacheType in
-            }.resizable().frame(width: 80,height: 80).cornerRadius(40).padding(.trailing, 10)
+            }.resizable().frame(width: Constant.Alignment.constraint_80,height: Constant.Alignment.constraint_80).cornerRadius(Constant.Alignment.constraint_40).padding(.trailing, Constant.Alignment.constraint_10)
             
         }.contentShape(Rectangle())
             .frame(maxWidth: .infinity)
-            .frame(height: 125).padding([.horizontal], 10)
+            .frame(height: Constant.Alignment.constraint_125).padding([.horizontal], Constant.Alignment.constraint_10)
            
     }
 }

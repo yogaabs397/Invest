@@ -2,33 +2,49 @@
 //  LoginVm.swift
 //  Invest Trial
 //
-//  Created by Abservetech on 28/09/23.
+//  Created by  on 28/09/23.
 //
 
 import Foundation
 
 
-class LoginVm {
+class LoginVm : ObservableObject {
     
-    var successHandler: ((BaseModel) -> ())?
-    var errorHandler: ((String) -> ())?
+    @Published var email = "eve.holt@reqres.in"
+    @Published var password = ""
+    @Published var isHome = false
+    @Published var showToast = false
+    @Published var message = String()
     
-}
-extension LoginVm {
-    typealias Credentials = (email: String, password: String)
-    
-    func loginApi(with credential: Credentials) {
-        
+    func loginApi() {
         var resource = Resource<BaseModel>(url: HttpNetworkRoute.Auth.login)
         resource.httpMethod = .post
-        resource.params = ["email": credential.email, "password": credential.password]
-        ApiClient.sharedInstance.sendRequest(withRes: resource) { result in
+        resource.params = ["email": email, "password": password]
+        ApiClient.sharedInstance.sendRequest(withRes: resource) { [unowned self] result in
             switch result {
-            case .success(let baseModel):
-                self.successHandler?(baseModel)
+            case .success(_):
+                isHome = true
+                commonAlert(message: Constant.Message.loginsuccess)
             case .failure(let error):
-                self.errorHandler?(error.messsage)
+                commonAlert(message: error.messsage)
             }
         }
+    }
+}
+extension LoginVm {
+    func loginValidation() {
+        if email.isEmpty {
+            commonAlert(message: Constant.Message.email)
+        } else if password.isEmpty {
+            commonAlert(message: Constant.Message.password)
+        }else {
+            loginApi()
+        }
+    }
+}
+extension LoginVm {
+    func commonAlert(message: String) {
+        self.message = message
+        showToast.toggle()
     }
 }

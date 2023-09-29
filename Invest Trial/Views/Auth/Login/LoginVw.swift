@@ -2,7 +2,7 @@
 //  LoginVw.swift
 //  Invest Trial
 //
-//  Created by Abservetech on 28/09/23.
+//  Created by  on 28/09/23.
 //
 
 import SwiftUI
@@ -12,16 +12,7 @@ import AlertToast
 struct LoginVw: View {
     
     //MARK: PROPERTIES :
-    
-    @State private var email = "eve.holt@reqres.in"
-    @State private var password = ""
-    @State var isHome = false
-    @State var loginVm = LoginVm()
-    @State private var showToast = false
-    @State var message = String()
-    @State var errorMsg = String()
-    
-
+    @ObservedObject var loginVm = LoginVm()
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -29,92 +20,69 @@ struct LoginVw: View {
             ScrollView {
                 VStack {
                     VStack {
-                    }.frame(height: 35)
+                    }.frame(height: Constant.Alignment.constraint_35)
                     NavigationTopView(Btnname: "", isNotification: false, ismenu: false)
                         .onTapGesture {
                             presentationMode.wrappedValue.dismiss()
                         }
                     Text(Constant.loginTop)   .foregroundColor(.black)
-                        .font(.system(size: 30))
+                        .font(.system(size: Constant.Alignment.constraint_30))
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity, alignment: .center)
                         .multilineTextAlignment(.center)
-                        .padding([.horizontal], 25)
+                        .padding([.horizontal], Constant.Alignment.constraint_25)
                     Text(Constant.signupBottom)
                         .foregroundColor(Color.secondary)
-                        .font(.system(size: 15))
+                        .font(.system(size: Constant.Alignment.constraint_15))
                         .fontWeight(.medium)
                         .frame(maxWidth: .infinity, alignment: .center)
                         .multilineTextAlignment(.center)
-                        .padding([.horizontal], 25).padding(.top, 2)
-                    VStack(spacing: 4) {
+                        .padding([.horizontal], Constant.Alignment.constraint_25).padding(.top, Constant.Alignment.constraint_2)
+                    VStack(spacing: Constant.Alignment.constraint_4) {
                         
-                        VStack(spacing: 15) {
-                            TextField(Constant.emailplaceHolder, text: $email).padding(.all, 10)
-                        }.frame(height: 60)
-                            .overlay(RoundedRectangle(cornerRadius: 15).stroke(.secondary, lineWidth: 1.5))
-                            .padding([.leading, .trailing, .top], 25)
+                        VStack(spacing: Constant.Alignment.constraint_15) {
+                            TextField(Constant.emailplaceHolder, text: $loginVm.email).padding(.all, Constant.Alignment.constraint_10)
+                        }.frame(height: Constant.Alignment.constraint_60)
+                            .overlay(RoundedRectangle(cornerRadius: Constant.Alignment.constraint_15).stroke(.secondary, lineWidth: 1.5))
+                            .padding([.leading, .trailing, .top], Constant.Alignment.constraint_25)
                         
-                        VStack(spacing: 15) {
-                            TextField(Constant.passwordplaceHolder, text: $password).padding(.all, 10)
-                        }.frame(height: 60)
-                            .overlay(RoundedRectangle(cornerRadius: 15).stroke(.secondary, lineWidth: 1.5))
-                            .padding([.leading, .trailing, .top], 25)
+                        VStack(spacing: Constant.Alignment.constraint_15) {
+                            TextField(Constant.passwordplaceHolder, text: $loginVm.password).padding(.all, Constant.Alignment.constraint_10)
+                        }.frame(height: Constant.Alignment.constraint_60)
+                            .overlay(RoundedRectangle(cornerRadius: Constant.Alignment.constraint_15).stroke(.secondary, lineWidth: 1.5))
+                            .padding([.leading, .trailing, .top], Constant.Alignment.constraint_25)
                         
                     }
                     Button(action: {
-
+                        
                     }) {
                         Text(Constant.submit)
                             .padding(.horizontal)
                             .fontWeight(.semibold)
                             .font(.headline)
-                            .font(.system(size: 18))
+                            .font(.system(size: Constant.Alignment.constraint_18))
                             .foregroundColor(.white)
                     }.contentShape(Rectangle())
                         .frame(maxWidth: .infinity)
-                        .frame(height: 60)
+                        .frame(height: Constant.Alignment.constraint_60)
                         .background(Color.appColor())
-                        .cornerRadius(15)
-                        .shadow(radius: 4, y: 4)
-                        .padding([.horizontal, .vertical], 25).onTapGesture {
-                            if email.isEmpty {
-                                message = "Please Enter Email Id"
-                                showToast.toggle()
-                            } else if password.isEmpty {
-                                message = "Please Enter Password"
-                                showToast.toggle()
-                            }else {
-                                loginApi()
-                            }
+                        .cornerRadius(Constant.Alignment.constraint_15)
+                        .shadow(radius: Constant.Alignment.constraint_4, y: Constant.Alignment.constraint_4)
+                        .padding([.horizontal, .vertical], Constant.Alignment.constraint_25).onTapGesture {
+                            loginVm.loginValidation()
                         }
-                    NavigationLink(destination: HomeVc().navigationBarBackButtonHidden(true), isActive: $isHome) {
+                    NavigationLink(destination: HomeVc().navigationBarBackButtonHidden(true), isActive: $loginVm.isHome) {
                         EmptyView().background(.gray)
                     }
-                }.toast(isPresenting: $showToast){
-                    AlertToast(displayMode: .hud, type: .regular, title: message)
+                }.toast(isPresenting: $loginVm.showToast){
+                    AlertToast(displayMode: .hud, type: .regular, title: loginVm.message)
                 }
             }
         }
     }
 }
-
 struct LoginVw_Previews: PreviewProvider {
     static var previews: some View {
         LoginVw()
-    }
-}
-extension LoginVw {
-    func loginApi() {
-        let loginVal = (email, password)
-        loginVm.loginApi(with: loginVal)
-        loginVm.successHandler = { (resData) in
-            isHome = true
-            message = "Login Successfully"
-            showToast.toggle()
-        }
-        loginVm.errorHandler = { (errData) in
-            print("Error Data::\(errData)")
-        }
     }
 }

@@ -2,36 +2,36 @@
 //  NotificationTvw.swift
 //  Invest Trial
 //
-//  Created by Abservetech on 27/09/23.
+//  Created by  on 27/09/23.
 //
 
 import SwiftUI
 
 struct NotificationTvw: View {
+    
     var body: some View {
         HStack {
-            Image("notificationsub").resizable().frame(width: 80,height: 80).cornerRadius(15)
-            
+            Image(Image.notificationsub()).resizable().frame(width: Constant.Alignment.constraint_80,height: Constant.Alignment.constraint_80).cornerRadius(Constant.Alignment.constraint_15)
             HStack {
-                Text("Apple stocks just increased Check it out now.")
+                Text(Constant.notificationTopContent)
                     .foregroundColor(Color.black)
-                    .font(.system(size: 18))
+                    .font(.system(size: Constant.Alignment.constraint_18))
                     .fontWeight(.regular)
                 VStack {
-                    Text("15min ago")
+                    Text(Constant.notificationSub)
                         .foregroundColor(Color.lightGray())
-                        .font(.system(size: 18))
+                        .font(.system(size: Constant.Alignment.constraint_18))
                         .fontWeight(.regular)
-                        .padding(.top, 10)
+                        .padding(.top, Constant.Alignment.constraint_10)
                     Spacer()
                 }
-               
             }
            
         }.contentShape(Rectangle())
             .frame(maxWidth: .infinity)
-            .frame(height: 110).padding([.horizontal], 10)
+            .frame(height: Constant.Alignment.constraint_110).padding([.horizontal], Constant.Alignment.constraint_10)
     }
+    
 }
 
 struct NotificationTvw_Previews: PreviewProvider {

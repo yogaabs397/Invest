@@ -2,7 +2,7 @@
 //  HomeDetailVw.swift
 //  Invest Trial
 //
-//  Created by Abservetech on 27/09/23.
+//  Created by  on 27/09/23.
 //
 
 import SwiftUI
@@ -16,78 +16,75 @@ struct HomeDetailVw: View {
     
     // MARK: - PROPERTIES :
     @Environment(\.presentationMode) var presentationMode
-    @State var investNow = Bool()
-    @StateObject var investguide = observer(with: .investmentGuide)
-    @StateObject var bestPlan = observer(with: .bestplan)
-    var subtype: InvestSubtype = .bestplan
+    @ObservedObject var investguide = InvestVm(with: .investmentGuide)
+    @ObservedObject var bestPlan = InvestVm(with: .bestplan)
    
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack {
                     VStack {
-                    }.frame(height: 35).frame(height: 35)
+                    }.frame(height: Constant.Alignment.constraint_35)
                     NavigationTopView(Btnname: "", isNotification: true, ismenu: true)
                         .onTapGesture {
                             presentationMode.wrappedValue.dismiss()
                         }
                     Text(Constant.welcomeContent)   .foregroundColor(.black)
-                        .font(.system(size: 27))
+                        .font(.system(size: Constant.Alignment.constraint_27))
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .multilineTextAlignment(.leading)
-                        .padding(.vertical, 20).padding(.horizontal, 30)
+                        .padding(.vertical, Constant.Alignment.constraint_20).padding(.horizontal, Constant.Alignment.constraint_30)
                     VStack(alignment: .leading, spacing: 0) {
                         Text(Constant.homeContent)
                             .foregroundColor(Color.white)
-                            .font(.system(size: 18))
+                            .font(.system(size: Constant.Alignment.constraint_18))
                             .fontWeight(.medium)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding([.horizontal], 25).padding(.top, 30)
+                            .padding([.horizontal], Constant.Alignment.constraint_25).padding(.top, Constant.Alignment.constraint_30)
                         HStack {
-                            Text("N203,935")   .foregroundColor(.white)
-                                .font(.system(size: 28))
-                                .fontWeight(.bold).padding(.leading, 15)
+                            Text(Constant.homeBottom)   .foregroundColor(.white)
+                                .font(.system(size: Constant.Alignment.constraint_28))
+                                .fontWeight(.bold).padding(.leading, Constant.Alignment.constraint_15)
                             Spacer()
                             Button(action: {
-                                investNow = true
                             }) {
                                 Text(Constant.investNow)
                                     .fontWeight(.medium)
                                     .font(.headline)
-                                    .font(.system(size: 14))
+                                    .font(.system(size: Constant.Alignment.constraint_14))
                                     .foregroundColor(Color.appColor()).background(.white)
                             }.contentShape(Rectangle())
-                                .frame(minWidth: 0, maxWidth: 90,maxHeight: 10)
+                                .frame(minWidth: 0, maxWidth: Constant.Alignment.constraint_90,maxHeight: Constant.Alignment.constraint_10)
                                 .padding()
                                 .background(Color.white)
-                                .cornerRadius(15)
-                                .shadow(radius: 2, y: 2)
+                                .cornerRadius(Constant.Alignment.constraint_15)
+                                .shadow(radius: Constant.Alignment.constraint_2, y: Constant.Alignment.constraint_2)
                                 .padding()
                             
-                        }.padding([.top, .leading], 15)
+                        }.padding([.top, .leading], Constant.Alignment.constraint_15)
                     } .contentShape(Rectangle())
                         .frame(maxWidth: .infinity)
-                        .frame(height: 150)
+                        .frame(height: Constant.Alignment.constraint_150)
                         .background(Color.appColor())
-                        .cornerRadius(20)
-                        .padding(.horizontal, 25)
+                        .cornerRadius(Constant.Alignment.constraint_20)
+                        .padding(.horizontal, Constant.Alignment.constraint_25)
                     HStack {
                         Text(Constant.bestPlan)   .foregroundColor(.black)
-                            .font(.system(size: 25))
+                            .font(.system(size: Constant.Alignment.constraint_25))
                             .fontWeight(.bold)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .multilineTextAlignment(.leading).padding([.leading, .top], 30)
+                            .multilineTextAlignment(.leading).padding([.leading, .top], Constant.Alignment.constraint_30)
                         Spacer()
                         Text(Constant.seeAll)
                             .foregroundColor(Color.red)
-                            .font(.system(size: 18))
+                            .font(.system(size: Constant.Alignment.constraint_18))
                             .fontWeight(.medium)
-                            .padding([.trailing, .top], 30)
+                            .padding([.trailing, .top], Constant.Alignment.constraint_30)
                     }
                     
                     ScrollView(.horizontal) {
-                        LazyHStack(spacing: 15) {
+                        LazyHStack(spacing: Constant.Alignment.constraint_15) {
                             ForEach (0..<bestPlan.investData.count, id: \.self) { i in
                                 BestPlansCvw(bestPlans: bestPlan.investData[i])
                             }
@@ -96,24 +93,21 @@ struct HomeDetailVw: View {
                     
                     VStack(spacing: 1) {
                         Text(Constant.investGuide)   .foregroundColor(.black)
-                            .font(.system(size: 25))
+                            .font(.system(size: Constant.Alignment.constraint_25))
                             .fontWeight(.bold)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .multilineTextAlignment(.leading).padding(.leading, 30).padding(.top, 10)
+                            .multilineTextAlignment(.leading).padding(.leading, Constant.Alignment.constraint_30).padding(.top, Constant.Alignment.constraint_10)
                         
                         ScrollView(.vertical) {
-                            VStack(spacing: 10) {
+                            VStack(spacing: Constant.Alignment.constraint_10) {
                                 ForEach (0..<investguide.investData.count, id: \.self) { i in
                                     InvestGuideCvw(investData: investguide.investData[i])
                                     Divider().background(.secondary)
                                 }
-                              
-                            }.padding(.top, 10)
+                            }.padding(.top, Constant.Alignment.constraint_10)
                            
                         }.scrollIndicators(.hidden)
                     }
-               
-                    
                 }
             }.scrollIndicators(.hidden)
         }
@@ -125,18 +119,4 @@ struct HomeDetailVw_Previews: PreviewProvider {
         HomeDetailVw()
     }
 }
-class observer: ObservableObject {
-    
-    var investVm = InvestVm()
-    @Published  var investData = [InvestModel]()
-    
-    init(with type : InvestSubtype) {
-        investVm.investApi(with: type)
-        investVm.succesHandler = { (resData) in
-            self.investData = resData.investData
-        }
-        investVm.errorhandler = { (errData) in
-            print("Error Data : \(errData)")
-        }
-    }
-}
+

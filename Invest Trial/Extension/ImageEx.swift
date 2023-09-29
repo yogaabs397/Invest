@@ -2,7 +2,7 @@
 //  ImageEx.swift
 //  Invest Trial
 //
-//  Created by Abservetech on 25/09/23.
+//  Created by  on 25/09/23.
 //
 
 import Foundation
@@ -18,4 +18,23 @@ extension Image {
     static func menu() -> String {
         return "menu"
     }
+    static func splash() -> String {
+        return "Splash"
+    }
+    static func right() -> String {
+        return "right"
+    }
+    static func profile() -> String {
+        return "defaultprofile"
+    }
+    static func notificationsub() -> String {
+        return "notificationsub"
+    }
+    static func banklogo() -> String {
+        return "banklogo"
+    }
+    static func sidemenu() -> String {
+        return "sidemenu"
+    }
+  
 }

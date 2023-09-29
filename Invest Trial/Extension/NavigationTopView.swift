@@ -2,7 +2,7 @@
 //  NavigationTopView.swift
 //  Invest Trial
 //
-//  Created by Abservetech on 25/09/23.
+//  Created by  on 25/09/23.
 //
 
 import SwiftUI
@@ -17,30 +17,28 @@ struct NavigationTopView: View {
         HStack {
             if ismenu {
                 Image(Image.menu()).resizable()
-                    .frame(width: 24, height: 24)
+                    .frame(width: Constant.Alignment.constraint_24, height: Constant.Alignment.constraint_24)
             } else {
                 Image(Image.back()).resizable()
-                    .frame(width: 15, height: 25)
+                    .frame(width: Constant.Alignment.constraint_15, height: Constant.Alignment.constraint_25)
             }
-         
-          
             Text(Btnname)
                 .fontWeight(.bold)
                 .foregroundColor(.black)
-                .font(.system(size: 22))
+                .font(.system(size: Constant.Alignment.constraint_22))
                 .multilineTextAlignment(.leading)
                 .lineLimit(nil)
-                .frame(maxWidth: .infinity, maxHeight: 50)
+                .frame(maxWidth: .infinity, maxHeight: Constant.Alignment.constraint_50)
             if isNotification {
                 Image(Image.notification()).resizable()
-                    .frame(width: 24, height: 24).onTapGesture {
+                    .frame(width: Constant.Alignment.constraint_24, height: Constant.Alignment.constraint_24).onTapGesture {
                         notificationPush = true
                     }
             }
             NavigationLink(destination: NotificationVw().navigationBarBackButtonHidden(true), isActive: $notificationPush) {
                 EmptyView().background(.gray)
             }
-        }.padding(.horizontal, 25.0)
+        }.padding(.horizontal, Constant.Alignment.constraint_25)
     }
 }
 

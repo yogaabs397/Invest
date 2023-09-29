@@ -2,7 +2,7 @@
 //  EditInfoVc.swift
 //  Invest Trial
 //
-//  Created by Abservetech on 26/09/23.
+//  Created by  on 26/09/23.
 //
 
 import SwiftUI
@@ -24,63 +24,60 @@ struct EditInfoVc: View {
             ScrollView {
                 VStack {
                     VStack {
-                    }.frame(height: 35)
+                    }.frame(height:  Constant.Alignment.constraint_35)
                     NavigationTopView(Btnname: Constant.profilecontact, isNotification: false, ismenu: false)
                         .onTapGesture {
                             presentationMode.wrappedValue.dismiss()
                         }
-                    Image("defaultprofile").resizable().frame(width: 180,height: 180).cornerRadius(90).padding(.top, 25)
+                    Image(Image.profile()).resizable().frame(width:  Constant.Alignment.constraint_180,height: Constant.Alignment.constraint_180).cornerRadius(Constant.Alignment.constraint_90).padding(.top, Constant.Alignment.constraint_25)
                     VStack{
                         VStack(alignment: .leading) {
                             VStack {
                                 HStack {
-                                    Text("Name").fontWeight(.semibold).foregroundColor(.secondary)
+                                    Text(Constant.nameplaceholder).fontWeight(.semibold).foregroundColor(.secondary)
                                     Spacer()
-                                    Text("Change").fontWeight(.semibold).font(.system(size: 15)).foregroundColor(.appColor()).padding([.trailing, .top], 20)
+                                    Text(Constant.changeplaceholder).fontWeight(.semibold).font(.system(size: Constant.Alignment.constraint_15)).foregroundColor(.appColor()).padding([.trailing, .top], Constant.Alignment.constraint_20)
                                 }
-                                TextField("Warren Buffet", text: $fullname).allowsHitTesting(false)
+                                TextField(Constant.staticname, text: $fullname).allowsHitTesting(false)
                                 Divider().background(.secondary)
                             }
                             VStack {
                                 HStack {
-                                    Text("Birthdate").fontWeight(.semibold).foregroundColor(.secondary)
+                                    Text(Constant.dateofbirth).fontWeight(.semibold).foregroundColor(.secondary)
                                     Spacer()
-                                    Text("Change").fontWeight(.semibold).font(.system(size: 15)).foregroundColor(.appColor()).padding([.trailing, .top], 20)
+                                    Text(Constant.changeplaceholder).fontWeight(.semibold).font(.system(size: Constant.Alignment.constraint_15)).foregroundColor(.appColor()).padding([.trailing, .top], Constant.Alignment.constraint_20)
                                 }
-                                TextField("05 November 1993", text: $birthday).allowsHitTesting(false)
+                                TextField(Constant.staticdate, text: $birthday).allowsHitTesting(false)
                                 Divider().background(.secondary)
                             }
                             VStack {
                                 HStack {
-                                    Text("Gender").fontWeight(.semibold).foregroundColor(.secondary)
+                                    Text(Constant.gender).fontWeight(.semibold).foregroundColor(.secondary)
                                     Spacer()
-                                    Text("Change").fontWeight(.semibold).font(.system(size: 15)).foregroundColor(.appColor()).padding([.trailing, .top], 20)
+                                    Text(Constant.changeplaceholder).fontWeight(.semibold).font(.system(size: Constant.Alignment.constraint_15)).foregroundColor(.appColor()).padding([.trailing, .top], Constant.Alignment.constraint_20)
                                 }
-                                TextField("gender", text: $gender).allowsHitTesting(false)
+                                TextField(Constant.gender, text: $gender).allowsHitTesting(false)
                                 Divider().background(.secondary)
                             }
-                            
                             VStack {
                                 HStack {
-                                    Text("Email").fontWeight(.semibold).foregroundColor(.secondary)
+                                    Text(Constant.email).fontWeight(.semibold).foregroundColor(.secondary)
                                     Spacer()
-                                    Text("Change").fontWeight(.semibold).font(.system(size: 15)).foregroundColor(.appColor()).padding([.trailing, .top], 20)
+                                    Text(Constant.changeplaceholder).fontWeight(.semibold).font(.system(size: Constant.Alignment.constraint_15)).foregroundColor(.appColor()).padding([.trailing, .top], Constant.Alignment.constraint_20)
                                 }
-                                TextField("gender", text: $email).allowsHitTesting(false)
+                                TextField(Constant.email, text: $email).allowsHitTesting(false)
                                 Divider().background(.secondary)
                             }
-                            
                             VStack(alignment: .leading) {
                                 
-                                Text("Phone Number").fontWeight(.semibold).foregroundColor(.secondary).padding(.top, 10)
+                                Text(Constant.phonenumber).fontWeight(.semibold).foregroundColor(.secondary).padding(.top, Constant.Alignment.constraint_10)
                                 
-                                TextField("gender", text: $phonenumber).allowsHitTesting(false)
+                                TextField(Constant.phonenumber, text: $phonenumber).allowsHitTesting(false)
                                 Divider().background(.secondary)
                             }
-                            
                             VStack(alignment: .leading) {
-                                Text("Address").fontWeight(.semibold).foregroundColor(.secondary).padding(.top, 10)
-                                TextField("gender", text: $address) .allowsHitTesting(false)
+                                Text(Constant.address).fontWeight(.semibold).foregroundColor(.secondary).padding(.top, Constant.Alignment.constraint_10)
+                                TextField(Constant.address, text: $address) .allowsHitTesting(false)
                                 Divider().background(.secondary)
                             }
                         }.padding()

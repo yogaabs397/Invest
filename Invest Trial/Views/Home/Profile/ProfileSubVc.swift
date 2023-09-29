@@ -2,7 +2,7 @@
 //  ProfileSubVc.swift
 //  Invest Trial
 //
-//  Created by Abservetech on 26/09/23.
+//  Created by  on 26/09/23.
 //
 
 import SwiftUI
@@ -15,19 +15,19 @@ struct ProfileSubVc: View {
     
     var body: some View {
         VStack {
-            HStack(spacing: 10) {
-                Image(profileModel.subImg).resizable().frame(width: 25, height: 25).padding([.vertical, .leading])
+            HStack(spacing: Constant.Alignment.constraint_10) {
+                Image(profileModel.subImg).resizable().frame(width: Constant.Alignment.constraint_25, height: Constant.Alignment.constraint_25).padding([.vertical, .leading])
                 Text(profileModel.subName).fontWeight(.regular)
                 Spacer()
-                Image("right").resizable().frame(width: 15, height: 23).padding(.trailing, 15)
+                Image(Image.right()).resizable().frame(width: Constant.Alignment.constraint_15, height: Constant.Alignment.constraint_23).padding(.trailing, Constant.Alignment.constraint_15)
             }  .contentShape(Rectangle())
                 .frame(maxWidth: .infinity)
-                .frame(height: 60)
+                .frame(height:  Constant.Alignment.constraint_60)
                 .background(Color.white)
                 .cornerRadius(0)
                 .shadow(
                     color: Color.gray,
-                    radius: 5,
+                    radius: Constant.Alignment.constraint_2,
                     x: 0,
                     y: 0
                 )
@@ -35,15 +35,14 @@ struct ProfileSubVc: View {
                     isPresentingDetail = true
                 }
             if profileModel.subName == Constant.profilecontact {
-                NavigationLink(destination: EditInfoVc(name: profileModel.subName).navigationBarBackButtonHidden(true), isActive: $isPresentingDetail) {
-                    EmptyView()
-                }
-            } else {
+                NavigationLink(destination: EditInfoVc(name: profileModel.subName).navigationBarBackButtonHidden(true), isActive: $isPresentingDetail) { EmptyView() }
+            } else if profileModel.subName == Constant.profilebank{
+                NavigationLink(destination: BankListVw().navigationBarBackButtonHidden(true), isActive: $isPresentingDetail) { EmptyView() }
+            }  else {
                 NavigationLink(destination: BankVc(), isActive: $isPresentingDetail) {
                     EmptyView()
                 }
             }
-           
         }
         
     }
