@@ -11,7 +11,6 @@ struct BankListTvw: View {
     var body: some View {
         HStack {
             Image(Image.banklogo()).resizable().frame(width: Constant.Alignment.constraint_80,height: Constant.Alignment.constraint_80).cornerRadius(Constant.Alignment.constraint_15)
-            
             HStack {
                 VStack(alignment: .leading,spacing: Constant.Alignment.constraint_5) {
                     Text(Constant.banklistTopTitle)

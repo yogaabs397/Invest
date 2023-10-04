@@ -26,12 +26,10 @@ struct NotificationTvw: View {
                     Spacer()
                 }
             }
-           
         }.contentShape(Rectangle())
             .frame(maxWidth: .infinity)
             .frame(height: Constant.Alignment.constraint_110).padding([.horizontal], Constant.Alignment.constraint_10)
     }
-    
 }
 
 struct NotificationTvw_Previews: PreviewProvider {

@@ -48,6 +48,7 @@
 		905CE6002AC444AF004C04B5 /* NotificationTvw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE5FF2AC444AF004C04B5 /* NotificationTvw.swift */; };
 		905CE6022AC45855004C04B5 /* BankListVw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE6012AC45855004C04B5 /* BankListVw.swift */; };
 		905CE6042AC459DA004C04B5 /* BankListTvw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905CE6032AC459DA004C04B5 /* BankListTvw.swift */; };
+		905D33DD2ACAF2C3008FFDDD /* BestPlanDetailVw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D33DC2ACAF2C3008FFDDD /* BestPlanDetailVw.swift */; };
 		905F83152AC5AC1E002BA6F8 /* ShowAlertVws.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905F83142AC5AC1E002BA6F8 /* ShowAlertVws.swift */; };
 		90C906722AC2A0C50031C1B0 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C906712AC2A0C40031C1B0 /* ProfileModel.swift */; };
 		90E285502AC308900026C1CA /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90E285492AC308900026C1CA /* DMSans-Regular.ttf */; };
@@ -124,6 +125,7 @@
 		905CE5FF2AC444AF004C04B5 /* NotificationTvw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTvw.swift; sourceTree = "<group>"; };
 		905CE6012AC45855004C04B5 /* BankListVw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankListVw.swift; sourceTree = "<group>"; };
 		905CE6032AC459DA004C04B5 /* BankListTvw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankListTvw.swift; sourceTree = "<group>"; };
+		905D33DC2ACAF2C3008FFDDD /* BestPlanDetailVw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestPlanDetailVw.swift; sourceTree = "<group>"; };
 		905F83142AC5AC1E002BA6F8 /* ShowAlertVws.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertVws.swift; sourceTree = "<group>"; };
 		90C906712AC2A0C40031C1B0 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		90E285492AC308900026C1CA /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				905CE5E72AC44142004C04B5 /* Profile */,
 				905CE5EC2AC44142004C04B5 /* HomeVc.swift */,
 				905CE5FA2AC44408004C04B5 /* NotificationVw.swift */,
+				905D33DC2ACAF2C3008FFDDD /* BestPlanDetailVw.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -723,6 +726,7 @@
 				905F83152AC5AC1E002BA6F8 /* ShowAlertVws.swift in Sources */,
 				905CE5F82AC44142004C04B5 /* SignupVc.swift in Sources */,
 				905CE5F32AC44142004C04B5 /* ProfileVc.swift in Sources */,
+				905D33DD2ACAF2C3008FFDDD /* BestPlanDetailVw.swift in Sources */,
 				903D47342AC5558500A69262 /* UserDefaultsEx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

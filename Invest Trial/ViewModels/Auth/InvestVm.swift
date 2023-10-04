@@ -11,12 +11,10 @@ import Foundation
 class InvestVm: ObservableObject  {
     
     @Published  var investData = [InvestModel]()
+    @Published  var bestData = [InvestModel]()
     @Published  var investType : InvestSubtype = .bestplan
     
-    init(with type : InvestSubtype) {
-        investType = type
-        investApi(with: investType)
-    }
+   
     func investApi(with investType: InvestSubtype) {
         var url = String()
         investSubtypeData(investType: investType) { type in
@@ -25,9 +23,17 @@ class InvestVm: ObservableObject  {
         var resource = Resource<BaseModel>(url: url)
         resource.httpMethod = .get
         ApiClient.sharedInstance.sendRequest(withRes: resource) { [unowned self] result in
+            
             switch result {
             case .success(let baseModel):
-                investData = baseModel.investData
+                DispatchQueue.main.async { [unowned self] in
+                    switch investType {
+                    case .investmentGuide:
+                        investData = baseModel.investData
+                    case .bestplan:
+                        bestData = baseModel.investData
+                    }
+                }
             case .failure(_):
                 break
             }

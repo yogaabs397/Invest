@@ -59,7 +59,6 @@ struct CommonVc: View {
                         EmptyView().background(.gray)
                     }
                 }
-                
             }
         }
     }

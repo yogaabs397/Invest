@@ -52,9 +52,10 @@ struct Constant {
     static var banklistTopTitle = "Bank of Amrica - 0182128"
     static var banklistsubTitle = "Bank of Amrica - 0182128"
     static var homeBottom = "N203,935"
+    static var assetsContent = "Your total asset portfolio"
     static var profileStaticName = "Jonas Macroni"
     static var expert = "Expert"
-    
+    static var currentPlan = "Current Plans"
     
     
     struct Alignment {

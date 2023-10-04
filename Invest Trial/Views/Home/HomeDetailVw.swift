@@ -16,8 +16,8 @@ struct HomeDetailVw: View {
     
     // MARK: - PROPERTIES :
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var investguide = InvestVm(with: .investmentGuide)
-    @ObservedObject var bestPlan = InvestVm(with: .bestplan)
+    @StateObject var investguide = InvestVm()
+    @StateObject var bestPlan = InvestVm()
    
     var body: some View {
         NavigationStack {
@@ -85,8 +85,8 @@ struct HomeDetailVw: View {
                     
                     ScrollView(.horizontal) {
                         LazyHStack(spacing: Constant.Alignment.constraint_15) {
-                            ForEach (0..<bestPlan.investData.count, id: \.self) { i in
-                                BestPlansCvw(bestPlans: bestPlan.investData[i])
+                            ForEach (0..<investguide.bestData.count, id: \.self) { i in
+                                BestPlansCvw(bestPlans: investguide.bestData[i])
                             }
                         }
                     }.padding().scrollIndicators(.hidden)
@@ -110,6 +110,10 @@ struct HomeDetailVw: View {
                     }
                 }
             }.scrollIndicators(.hidden)
+        }.onAppear {
+            investguide.investApi(with:  .bestplan)
+            investguide.investApi(with:  .investmentGuide)
+
         }
     }
 }
